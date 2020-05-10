@@ -1,0 +1,41 @@
+@import "./base";
+
+@for $i from 1 through 3 {
+  $base-color: baseColorChooser($i);
+
+  .container-#{$i} {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 10rem;
+    grid-gap: .5rem;
+  
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      
+      .color-box-text {
+        color: lightblue;
+      }
+      
+      &:nth-child(5) > .color-box-text {
+        color: $text-color;
+      }
+    }
+
+    .base-color {
+      background-color: $base-color;
+    }
+
+    $maximumNumber: 4;
+    @for $j from 1 through $maximumNumber {
+      .darken-#{$j} {
+        background-color: calculateDarkenColor($base-color, $j,  $maximumNumber + 1);
+      }
+      .lighten-#{$j} {
+        background-color: calculateLightenColor($base-color, $j);
+      }
+    }
+  }
+}

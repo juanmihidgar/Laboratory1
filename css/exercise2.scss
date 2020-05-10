@@ -1,0 +1,55 @@
+@import "base";
+
+$base-color: transparent;
+
+$mainFont: if($template-theme > 0,'Dancing Script', 'Arima Madurai');
+$secondaryFont: if($template-theme > 0,'Cantora One', 'New Rocker');
+$contentFont: 'Comic Neue';
+
+@if ($template-theme > 0) {
+  $base-color: red;
+} @else {
+  $base-color: blue;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  justify-content: center;
+  align-content: center;
+
+  div {
+    border: 2px solid grey;
+    font-family: $contentFont;
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  
+  span {
+    margin: 0.5rem 0rem;
+    display: block;
+  }
+ 
+  .base {
+    background-color: $base-color;
+  } 
+  .important {
+    background-color: darken($base-color, 30);
+  } 
+  .warning {
+    background-color: lighten($base-color, 30);
+  }
+  .main-font {
+    font-family: $mainFont;
+  }
+  .secondary-font {
+    font-family: $secondaryFont;
+  }
+  .shadow {
+    box-shadow: if($template-theme > 0,-1rem,1rem) 1rem 1.5rem;
+  }
+}
