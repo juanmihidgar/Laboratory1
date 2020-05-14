@@ -1,0 +1,91 @@
+@import "base";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$body-background-color: lightgrey;
+$card-background-color: white;
+$card-button-color: white;
+$card-background-button: olivedrab;
+$card-date: olivedrab;
+
+@mixin reset-format {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin set-margin-card-items-format {
+  margin: 0rem 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  @include reset-format;
+}
+
+body {
+  background-color: $body-background-color;
+  
+  .mainCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-width: auto;
+    
+    .card {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 2rem 0.5fr 1rem 5rem;
+      grid-auto-columns: min-content;
+      grid-gap: 1rem;
+      background-color: $card-button-color;
+      margin: 1rem;
+      flex: 0 1 calc(33% - 2rem);
+
+      @media (max-width: 1200px) {
+        flex: 0 1 calc(50% - 2rem);
+      }
+
+      @media (max-width: 660px) {
+        flex: 0 1 calc(100% - 2rem);
+        min-width: 20rem;
+      }
+      
+      figure {
+        width: 100%;
+        height: 100%;
+
+        img{
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+      }
+
+      div, p, h2, a {
+        @include set-margin-card-items-format;
+      }
+      
+      div {
+        justify-self: end;
+
+        span {
+          color: $card-date;
+          b {
+            color: black;
+          }
+        }
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $card-button-color;
+        background-color: $card-background-button;
+        margin: 1rem;
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+  }
+}

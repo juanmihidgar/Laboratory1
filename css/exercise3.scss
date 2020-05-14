@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: #006A7D;
+  
+  a {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: white;
+    min-width: 5rem;
+    
+    &:hover {
+      background-color: #184658;
+    }
+  }
+}
+
+@media screen and (max-width:470px) {
+  header {
+    margin: 1rem;
+    overflow: hidden;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: calc(100vw - 2rem);
+
+    a {
+      text-align: center;
+    }
+  }
+}
