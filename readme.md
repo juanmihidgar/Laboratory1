@@ -1,4 +1,4 @@
-## Instruction for laboratory 1 exercises from Lemoncode Master
+## Instruction for laboratory 1 bonus exercise from Lemoncode Master
 
 You can run my app using the next commands:
 ```
@@ -7,3 +7,5 @@ npm start
 ```
 
 You can run it in http://localhost:1234
+
+or you can check the result here https://juanmihidgar.github.io/Laboratory1/
