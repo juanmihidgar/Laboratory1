@@ -1,0 +1,2 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");body{font-family:Roboto,sans-serif}.menu{display:flex;flex-direction:row;justify-content:space-between;background-color:#006a7d}.menu a{padding:1rem 2rem;text-decoration:none;color:#fff}.menu a:hover{background-color:#184658}@media screen and (max-width:470px){header{margin:1rem;overflow:hidden}.menu{flex-direction:column;width:calc(100vw - 3rem)}.menu a{text-align:center}}
+/*# sourceMappingURL=/Laboratory1/exercise3.e0b7467a.css.map */
